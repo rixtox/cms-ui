@@ -1,0 +1,178 @@
+@import utils
+@import config
+
+body
+  margin: 0
+  background: #2f2f2f url('/images/classy_fabric.png')
+  font-family: Source Sans Pro, Arial
+
+li
+  list-style-type: none
+
+a
+  color: $grey
+  text-decoration: none
+  outline: none
+  transition(all .5s)
+  &:hover
+    color: $link-hover-color
+    text-shadow(0 0 10px $link-hover-color - rgba(0,0,0,.05))
+
+.wrap
+  position: absolute
+  width: 100%
+
+#sidebar
+  float: left
+  color: $dark
+  width: $sidebar-width
+  #logo
+    height: 100px
+    padding: 20px
+    text-align: center
+    img
+      height: 100%
+      width: auto
+  nav
+    font-size: 20px
+    margin: 0 0 -22px
+    &.bg
+      a, li
+        color: $dark
+        &:hover
+          &, & a
+            color: $dark !important
+            text-shadow(none !important)
+    &:not(.bg)
+      li:not(.current):hover
+        icon:before
+          color: $link-hover-color
+          text-shadow(0 0 10px $link-hover-color - rgba(0,0,0,.05))
+    &:not(.curved-border)
+      padding: 20px 0
+    &.nav-publish
+      svg
+        .nav-top, .nav-bottom
+          fill: $blue
+      ul
+        background-color: $blue
+    &.nav-social
+      svg
+        .nav-top, .nav-bottom
+          fill: $green
+      ul
+        background-color: $green
+    &.nav-setting
+      color: #eee
+    ul
+      margin: -5px 0 0
+      padding: 10px 0
+      li
+        padding: 15px 0 15px 30px
+        transition(all, ease, .2s)
+        &.current
+          position: relative
+          z-index: 501
+          padding-left: 23px
+          border-left: 7px solid $dark
+          box-shadow(0 $sidebar-menu-border-width 0 0 rgba(0,0,0,.2)\, 0 $sidebar-menu-border-width 0 0 white inset)
+          background: $light
+        &:not(.current):hover
+          background: rgba(0,0,0,.05)
+          padding-left: 40px
+          a
+            color: $link-hover-color
+            text-shadow(0 0 10px $link-hover-color - rgba(0,0,0,.05))
+        a
+          text-decoration: none
+          outline: none
+          margin-left: 35px
+        icon
+          position: absolute
+          &:before
+            transition(all, .2s)
+            font-size: 25px
+        .notice
+          float: right
+          padding: 3px 16px 3px 10px
+          margin-top: -3px
+          background-color: rgba(0,0,0,.2)
+          color: white - rgba(0,0,0,.2)
+          border-radius(3px)
+
+#header
+  color: $grey
+  .nav-user
+    font-family: Raleway, Arial
+    right: 0
+    position: absolute
+    top: 0
+    padding: 20px 30px
+    font-size: 18px
+    ul
+      margin: 0
+      li
+        display: inline
+
+#content
+  a
+    color: $dark
+  position: relative
+  z-index: 500
+  margin-left: $sidebar-width - $sidebar-menu-border-width
+  margin-top: 60px
+  min-height: 850px
+  background-color: $light
+  border: $sidebar-menu-border-width solid white
+  border-right: none
+  text-shadow(0 1px 0 $light + 90%)
+  box-shadow(-10px 0 30px 0 rgba(0,0,0,.1))
+  border-radius(10px 0 0 10px)
+  .breadcrumbs
+    a
+      text-decoration: none
+      text-transform: uppercase
+      font-family: Arial
+      outline: none
+      font-size: 12px
+      line-height: 36px
+      color: $grey + 30%
+      padding-right: 30px
+      position: relative
+      &:hover
+        color: $blue + 30%
+        text-shadow(none)
+      &:after
+        content: '>'
+        position: absolute
+        right: 11px
+        color: $grey
+        font-size: 18px
+        font-family: Source Sans Pro
+      &:last-child
+        padding-right: 20px
+        color: $grey - 50%
+        &:hover
+          color: $blue
+        &:after
+          content: none
+  .header
+    background-color: $light + 30%
+    border-bottom: 1px solid $light - 15%
+    box-shadow(0 1px 0 0 $light + 50%)
+    h1
+      margin: 10px 0
+      color: $title-color
+
+#footer
+  float: right
+  color: $grey
+  padding: 5px 30px
+
+.container
+  padding: $container-padding
+
+
+
+
+

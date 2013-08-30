@@ -1,0 +1,129 @@
+<head>
+<title>CMS UI Design</title>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+<div class="wrap">
+  <div id="header">
+    <nav class="nav-user">
+      <ul>
+        <li>
+          <a href="">David Kovalev</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="sidebar">
+    <div id="logo">
+      <a href="/"><img src="/images/logo.png"/></a>
+    </div>
+    <nav class="nav-publish bg curved-border">
+      <ul>
+        <li>
+          <icon class="icon-home"></icon>
+          <a href="">Home</a>
+        </li>
+        <li class="current">
+          <icon class="icon-file-alt"></icon>
+          <a href="">Web Pages</a>
+        </li>
+        <li>
+          <icon class="icon-file-text"></icon>
+          <a href="">News Articles</a>
+        </li>
+        <li>
+          <icon class="icon-calendar"></icon>
+          <a href="">Events</a>
+          <span class="notice">2</span>
+        </li>
+        <li>
+          <icon class="icon-folder-open-alt"></icon>
+          <a href="">File Manager</a>
+        </li>
+        <li>
+          <icon class="icon-list"></icon>
+          <a href="">Menus</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="nav-social bg curved-border">
+      <ul>
+        <li>
+          <icon class="icon-coffee"></icon>
+          <a href="">Topics</a>
+        </li>
+        <li>
+          <icon class="icon-comments"></icon>
+          <a href="">Messages</a>
+          <span class="notice">8</span>
+        </li>
+        <li>
+          <icon class="icon-user"></icon>
+          <a href="">Membership</a>
+        </li>
+        <li>
+          <icon class="icon-camera-retro"></icon>
+          <a href="">Photo Album</a>
+        </li>
+        <li>
+          <icon class="icon-list-alt"></icon>
+          <a href="">Forms</a>
+        </li>
+        <li>
+          <icon class="icon-file-text-alt"></icon>
+          <a href="">Reports</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="nav-setting">
+      <ul>
+        <li>
+          <icon class="icon-gear"></icon>
+          <a href="">Configuration</a>
+        </li>
+        <li>
+          <icon class="icon-wrench"></icon>
+          <a href="">Tools</a>
+        </li>
+        <li>
+          <icon class="icon-envelope-alt"></icon>
+          <a href="">Contact</a>
+        </li>
+        <li>
+          <icon class="icon-external-link-sign"></icon>
+          <a href="">Blog</a>
+        </li>
+        <li>
+          <icon class="icon-keyboard"></icon>
+          <a href="">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+    <header class="container header">
+      <div class="breadcrumbs">
+        <a href="">Dashboard</a>
+        <a href="">Web Pages</a>
+        <a href="">Our Story</a>
+      </div>
+      <h1>Our Awesome Story</h1>
+    </header>
+  </div>
+  <div id="footer">
+    <p>&copy; Metacoder 2013</p>
+  </div>
+</div>
+</body>
+<template name="nav_top">
+  <svg width="250px" height="20px">
+    <path class="nav-top" d="M250,0c0,0-55,0-74,0c-3,0-9,1-12,2c-21,6.5-25,14-39,14S107,8.5,86,2c-2.5-1-9-2-12-2C55,0,0,0,0,0v20h250V0z"/>
+    <path fill="#FFFFFF" fill-opacity="0.3" d="M0,3c0,0,55,0,74,0C77,3,83,4,86,5c21,6.5,25,14,39,14s18-7.5,39-14c2.713-1,9-2,12-2C195,3,250,3,250,3V0c0,0-55,0-74,0c-3,0-9,1-12,2c-21,6.5-25,14-39,14S107,8.5,86,2c-2.5-1-9-2-12-2C55,0,0,0,0,0"/>
+  </svg>
+</template>
+<template name="nav_bottom">
+  <svg width="250px" height="20px">
+    <path class="nav-bottom" d="M250,0H0v4c0,0,55,0,74,0c3,0,9,1,12,2c21,6.5,25,14,39,14s18-7.5,39-14c2.713-1,9-2,12-2c19,0,74,0,74,0"/>
+  </svg>
+</template>
